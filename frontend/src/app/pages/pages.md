@@ -1,0 +1,1 @@
+In questa cartella ci vanno le pagine principali del sito

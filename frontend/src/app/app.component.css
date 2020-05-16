@@ -1,0 +1,12 @@
+@media (min-width: 400px) {
+    .navbar-links {
+        margin-left: auto;
+        margin-right: 0px;
+    }
+}
+
+@media (max-width: 399px) {
+    .navbar-links {
+        visibility: hidden;
+    }
+}

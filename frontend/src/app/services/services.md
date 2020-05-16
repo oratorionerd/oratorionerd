@@ -1,0 +1,1 @@
+In questa cartella ci vanno i servizi che interrogano le API di Strapi o altre API esterne

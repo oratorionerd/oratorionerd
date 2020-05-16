@@ -1,0 +1,21 @@
+.initial-section {
+    background-image: url('/assets/home.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 20%;;
+}
+
+.initial-section .header {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0, 0.4);
+    color : white;
+    display: flex;
+    align-items: center;
+}
+.initial-section .header h2 {
+    margin-bottom: 0px;
+    text-align: center;
+    margin: 0 10px;
+    width: inherit;
+}
