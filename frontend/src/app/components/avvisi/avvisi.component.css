@@ -4,5 +4,28 @@
   }
 
 .card-avviso {
-    margin: 10px;
+  height: fit-content;
+  margin: 10px;
+}
+@media (min-width: 900px) {
+  .card-avviso {
+      width: 30%;
+  }
+}
+
+@media (max-width: 899px) and (min-width: 600px) {
+  .card-avviso {
+      width: 45%;
+  }
+}
+
+@media (max-width: 599px) {
+  .card-avviso {
+      width: 100%;
+  }
+}
+.avvisi-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
