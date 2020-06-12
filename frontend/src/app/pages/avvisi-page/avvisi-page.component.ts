@@ -1,19 +1,13 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
-import { ApiService } from 'src/app/services/api/api.service';
-import {EventEmitter } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ApiService } from 'src/app/services/api.service';
 import { Avvisi } from 'src/app/models/avvisi';
 
-
 @Component({
-  selector: 'component-avvisi',
-  templateUrl: './avvisi.component.html',
-  styleUrls: ['./avvisi.component.css']
+  selector: 'app-avvisi-page',
+  templateUrl: './avvisi-page.component.html',
+  styleUrls: ['./avvisi-page.component.css']
 })
-
-
-export class AvvisiComponent implements OnInit {
-
-  @Input() maxAvvisi : number;
+export class AvvisiPageComponent implements OnInit {
   
   public avvisi : Avvisi[];
   constructor(private apiService : ApiService) {
@@ -36,8 +30,7 @@ export class AvvisiComponent implements OnInit {
       this.avvisi = avvisi;
       this.avvisi.forEach(avviso => avviso.data = this.convertDate(avviso.data))
       this.avvisi.sort(this.sortDateDesc)
-      if(!this.maxAvvisi)
-        this.maxAvvisi = avvisi.length;
     })
   }
+
 }

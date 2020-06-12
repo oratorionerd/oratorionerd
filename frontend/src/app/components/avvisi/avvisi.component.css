@@ -3,10 +3,36 @@
     margin-top: 10px
   }
 
-.card-avviso {
-  height: fit-content;
-  margin: 10px;
+.avvisi-title{
+  margin-top: 20px;
+  text-align: center;
+  font-size: 32px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  color:#3f51b5;
 }
+
+.card-avviso {
+  padding: 0px;
+  height: fit-content;
+  margin: 20px;
+  border-radius: 0px;
+}
+
+.title{
+  padding: 10px;
+  padding-bottom: 0px;
+}
+
+.content{
+  background-color: #f7f7f7;
+  width: 100%;
+  padding: 20px;
+  text-align: justify; 
+  font-size: 16px;
+}
+
+
+
 @media (min-width: 900px) {
   .card-avviso {
       width: 30%;
@@ -24,6 +50,7 @@
       width: 100%;
   }
 }
+
 .avvisi-container {
   display: flex;
   justify-content: center;

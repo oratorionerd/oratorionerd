@@ -1,0 +1,15 @@
+<mat-list role="list" class="list-container">
+  <h3 mat-header class="title">Storico degli avvisi</h3>
+  <mat-list *ngFor="let avviso of avvisi" class="list-avvisi">
+    <div class="header">
+      <h2>{{avviso.titolo}}</h2>
+      <h5>{{avviso.data}}</h5>
+    </div>
+    <div class="content">
+      {{avviso.contenuto}}
+    </div>
+    <mat-divider></mat-divider>  
+  </mat-list>
+
+</mat-list>
+

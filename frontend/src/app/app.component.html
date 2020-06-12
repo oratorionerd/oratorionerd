@@ -3,6 +3,12 @@
     <button *ngIf="isLoggedIn == false" mat-button (click)="openLoginDialog()">Login</button>
     <button *ngIf="isLoggedIn == false" mat-button (click)="openRegisterDialog()">Register</button>
   </div>-->
+  <span>
+    <a mat-button routerLink="/home">Home</a>
+  </span>
+  <div class="navbar-links">
+    <a mat-button routerLink="/avvisi">Storico avvisi</a>
+  </div>
 </mat-toolbar>
 <router-outlet></router-outlet>
 <footer class="footer" >
