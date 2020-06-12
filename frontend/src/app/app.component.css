@@ -10,3 +10,10 @@
         visibility: hidden;
     }
 }
+
+.footer {
+    background-color: lightgrey;
+    width: 100%;
+    height: fit-content;
+    padding: 10px 40px;
+}

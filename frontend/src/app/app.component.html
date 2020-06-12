@@ -1,8 +1,10 @@
 <mat-toolbar color="primary"><span>{{toolbarTitle}}</span>
-  <div class="navbar-links">
-    <a mat-button>Sezione 1</a>
-    <a mat-button>Sezione 2</a>
-    <a mat-button>Sezione 3</a>
-  </div>
+  <!--<div class="navbar-links">
+    <button *ngIf="isLoggedIn == false" mat-button (click)="openLoginDialog()">Login</button>
+    <button *ngIf="isLoggedIn == false" mat-button (click)="openRegisterDialog()">Register</button>
+  </div>-->
 </mat-toolbar>
 <router-outlet></router-outlet>
+<footer class="footer" >
+  <h2 class="mat-h2">Questo è il footer</h2>
+</footer>

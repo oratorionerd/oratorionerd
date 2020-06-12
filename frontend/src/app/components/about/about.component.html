@@ -1,0 +1,10 @@
+<h2 class="mat-h2" style="margin: 10px auto; width: fit-content;">Guarda il nuovo video: {{youtubeVideoObj.title}}</h2>
+<div class="container">
+    <div class="video-container">
+        <iframe class="videoFrame" [src]='safeURL' frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="informations">
+        <h3 class="mat-h3">Descrizione</h3>
+        <p>{{youtubeVideoObj.description}}</p>
+    </div>
+</div>
