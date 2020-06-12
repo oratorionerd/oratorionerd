@@ -1,8 +1,9 @@
-<mat-toolbar color="primary"><span>{{toolbarTitle}}</span>
+<mat-toolbar color="primary">
+  <span>
+    <a mat-button routerLink="/home">Home</a>
+  </span>
   <div class="navbar-links">
-    <a mat-button>Sezione 1</a>
-    <a mat-button>Sezione 2</a>
-    <a mat-button>Sezione 3</a>
+    <a mat-button routerLink="/avvisi">Storico avvisi</a>
   </div>
 </mat-toolbar>
 <router-outlet></router-outlet>

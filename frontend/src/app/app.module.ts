@@ -12,6 +12,8 @@ import { AvvisiComponent } from './components/avvisi/avvisi.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
+import { AvvisiPageComponent } from './pages/avvisi-page/avvisi-page.component';
+import { MatListModule } from '@angular/material/list';
 
 
 @NgModule({
@@ -19,6 +21,7 @@ import {MatButtonModule} from '@angular/material/button';
     AppComponent,
     HomeComponent,
     AvvisiComponent,
+    AvvisiPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,6 +29,7 @@ import {MatButtonModule} from '@angular/material/button';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatCardModule,
+    MatListModule,
     MatDividerModule,
     MatButtonModule
   ],
