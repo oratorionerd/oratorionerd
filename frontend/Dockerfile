@@ -13,4 +13,5 @@ RUN npm run build
 
 # Image
 FROM nginx:1.19.0-alpine
+COPY docker/default.conf /etc/nginx/conf.d/
 COPY --from=build /usr/src/app/dist/frontend /usr/share/nginx/html
