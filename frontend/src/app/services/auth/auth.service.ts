@@ -15,7 +15,7 @@ export class AuthService implements CanActivate {
 
   public getToken() : Token{
     const tokenString = localStorage.getItem('token');
-    console.log(JSON.parse(tokenString))
+    //console.log(JSON.parse(tokenString))
     return JSON.parse(tokenString);
   }
   public isAuthenticated(): boolean {

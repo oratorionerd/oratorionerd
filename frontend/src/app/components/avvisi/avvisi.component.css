@@ -3,34 +3,34 @@
     margin-top: 10px
   }
 
-.avvisi-title{
-  margin-top: 20px;
-  text-align: center;
-  font-size: 32px;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  color:#3f51b5;
-}
 
 .card-avviso {
-  padding: 0px;
   height: fit-content;
   margin: 20px;
-  border-radius: 0px;
+  padding: 0;
 }
 
-.title{
+.title {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+.content{
   padding: 10px;
-  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.attachment {
+  margin: 0 !important;
 }
 
 .content{
   background-color: #f7f7f7;
   width: 100%;
-  padding: 20px;
-  text-align: justify; 
-  font-size: 16px;
-}
 
+  text-align: justify; 
+}
 
 
 @media (min-width: 900px) {
@@ -55,4 +55,15 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  padding: 10px;
 }
+
+.card-avviso-full {
+  width: 100%;
+}
+
+/*
+.mat-card > .mat-card-actions {
+  margin: 0 !important; 
+}
+*/

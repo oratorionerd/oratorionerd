@@ -5,10 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import {YouTubePlayerModule} from '@angular/youtube-player';
 
 /* Pages and services */
 import { HomeComponent } from './pages/home/home.component';
-
+import {AvvisiPageComponent} from './pages/avvisi-page/avvisi-page.component'
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { TokenInterceptor } from './services/auth/token.interceptor';
 
@@ -28,6 +29,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatChipsModule} from '@angular/material/chips';
 import  {MatDividerModule} from '@angular/material/divider';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatListModule} from '@angular/material/list';
 
 /* Components */
 import { AvvisiComponent } from './components/avvisi/avvisi.component';
@@ -52,13 +54,15 @@ const MATERIAL_MODULES = [
   MatSliderModule,
   MatSnackBarModule,
   MatChipsModule,
-  MatDividerModule
+  MatDividerModule,
+  MatListModule
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    AvvisiPageComponent,
     AvvisiComponent,
     LoginDialogComponent,
     RegisterDialogComponent,
@@ -72,6 +76,7 @@ const MATERIAL_MODULES = [
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
+    YouTubePlayerModule,
     ...MATERIAL_MODULES
   ],
   providers: [

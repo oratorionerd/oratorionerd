@@ -1,20 +1,21 @@
 
-<div class="avvisi-title">
-  <p>Avvisi recenti</p>
-</div>
+
 
 <div class="avvisi-container">
-<mat-card *ngFor="let avviso of avvisi | slice:0:maxAvvisi" class="card-avviso">
+<mat-card *ngFor="let avviso of avvisi | slice:0:maxAvvisi" [ngClass]="isFullWidth ? 'card-avviso-full' : 'card-avviso'">
     <mat-card-header class="title">
       <mat-card-title >{{avviso.titolo}}</mat-card-title>
       <mat-card-subtitle>{{avviso.data}}</mat-card-subtitle>
     </mat-card-header>
-    <mat-divider></mat-divider>
     <mat-card-content class="content">
       <p>
         {{avviso.contenuto}}
       </p>
     </mat-card-content>
+    <mat-card-actions *ngIf="avviso.urlAllegato" class="attachment">
+      <p style="margin: 0 10px">Scarica l'allegato:</p> 
+      <a mat-button href="{{strapiEndpoint}}{{avviso.urlAllegato}}" style="overflow: hidden;" target="_blank">{{avviso.titoloAllegato}}</a>
+    </mat-card-actions>
 </mat-card>
 
 </div>

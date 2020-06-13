@@ -5,6 +5,7 @@ import { LoginDialogComponent } from './components/login-dialog/login-dialog.com
 import { RegisterDialogComponent } from './components/register-dialog/register-dialog.component';
 import { AuthService } from './services/auth/auth.service';
 import { ApiService } from './services/api/api.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -16,9 +17,14 @@ export class AppComponent implements OnInit{
   public toolbarTitle : string = 'Parrocchia di Sant\'Antonio';
   public isLoggedIn : boolean = false;
   constructor(private router : Router, public dialog : MatDialog,
-    private authService : AuthService, private apiService : ApiService) {
+    private authService : AuthService, private apiService : ApiService, public location : Location) {
     this.isLoggedIn = authService.isAuthenticated();
   }
+
+  public goBack() : void {
+    this.location.back();
+  }
+
   ngOnInit(): void {
     this.router.events
     .subscribe(event => {

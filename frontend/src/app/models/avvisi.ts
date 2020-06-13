@@ -3,4 +3,6 @@ export interface Avvisi {
     titolo : string;
     contenuto : string;
     data : string;
+    titoloAllegato : string;
+    urlAllegato : string;
 }
