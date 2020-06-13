@@ -1,0 +1,50 @@
+.videoFrame {
+    width : 640px;
+    height: 480px;
+}
+
+@media (min-width: 900px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .video-container {
+        width: 640px;
+        margin: 0 20px;
+    }
+
+    .informations {
+        width: calc(100% - 640px);
+        margin: 40px;
+    }
+
+
+  }
+
+  @media (max-width: 899px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .video-container {
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    .informations {
+        width: 45%;
+        margin: 10px auto;
+    }
+
+
+  }
+
+  @media (max-width: 680px) {
+    .videoFrame {
+        width : 320px;
+        height: 180px;
+    }
+  }
+

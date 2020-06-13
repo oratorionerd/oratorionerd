@@ -19,3 +19,12 @@
     margin: 0 10px;
     width: inherit;
 }
+
+.material-primary-title {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 32px;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    color:#3f51b5;
+  }
+  

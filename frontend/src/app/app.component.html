@@ -1,8 +1,18 @@
-<mat-toolbar color="primary"><span>{{toolbarTitle}}</span>
+<mat-toolbar color="primary">
+  <button *ngIf="!location.isCurrentPathEqualTo('/home')"
+    mat-icon-button (click)="goBack()">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  <span>{{toolbarTitle}}</span>
+  <!--<div class="navbar-links">
+    <button *ngIf="isLoggedIn == false" mat-button (click)="openLoginDialog()">Login</button>
+    <button *ngIf="isLoggedIn == false" mat-button (click)="openRegisterDialog()">Register</button>
+  </div>-->
   <div class="navbar-links">
-    <a mat-button>Sezione 1</a>
-    <a mat-button>Sezione 2</a>
-    <a mat-button>Sezione 3</a>
+    <a mat-button routerLink="/avvisi">Storico avvisi</a>
   </div>
 </mat-toolbar>
 <router-outlet></router-outlet>
+<footer class="footer">
+  <h2 class="mat-h2">Questo è il footer</h2>
+</footer>

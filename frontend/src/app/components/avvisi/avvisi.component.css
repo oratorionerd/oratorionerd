@@ -3,6 +3,67 @@
     margin-top: 10px
   }
 
+
 .card-avviso {
-    margin: 10px;
+  height: fit-content;
+  margin: 20px;
+  padding: 0;
 }
+
+.title {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+.content{
+  padding: 10px;
+  margin-bottom: 0px;
+}
+
+.attachment {
+  margin: 0 !important;
+}
+
+.content{
+  background-color: #f7f7f7;
+  width: 100%;
+
+  text-align: justify; 
+}
+
+
+@media (min-width: 900px) {
+  .card-avviso {
+      width: 30%;
+  }
+}
+
+@media (max-width: 899px) and (min-width: 600px) {
+  .card-avviso {
+      width: 45%;
+  }
+}
+
+@media (max-width: 599px) {
+  .card-avviso {
+      width: 100%;
+  }
+}
+
+.avvisi-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.card-avviso-full {
+  width: 100%;
+}
+
+/*
+.mat-card > .mat-card-actions {
+  margin: 0 !important; 
+}
+*/

@@ -1,0 +1,12 @@
+<div *ngIf="isLoaded">
+    <h2 class="mat-h2 primary-title" style="width: fit-content; margin: 10px auto;">Guarda il nuovo video: {{youtubeVideoObj.title}}</h2>
+    <div class="container">
+        <div class="video-container">
+            <youtube-player [videoId]="youtubeVideoObj.videoId"></youtube-player>
+        </div>
+        <div class="informations">
+            <h3 class="mat-h3">Descrizione</h3>
+            <p>{{youtubeVideoObj.description}}</p>
+        </div>
+    </div>
+</div>
