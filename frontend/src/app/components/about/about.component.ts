@@ -26,10 +26,6 @@ export class AboutComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const tag = document.createElement('script');
-    tag.src = "https://www.youtube.com/iframe_api";
-    document.body.appendChild(tag);
-
     if(window.innerWidth > 992){
       this.videoWidth = 640;
       this.videoHeight = 480;

@@ -1,6 +1,6 @@
 <mat-toolbar color="primary">
   <button *ngIf="!location.isCurrentPathEqualTo('/home')"
-    mat-icon-button (click)="goBack()">
+    mat-icon-button (click)="goBack()" class="back-arrow">
     <mat-icon>arrow_back</mat-icon>
   </button>
   <span>{{toolbarTitle}}</span>
@@ -15,6 +15,6 @@
 <router-outlet></router-outlet>
 <footer class="footer">
   <h4 class="mat-h4">
-    Parrocchia di S.Antonio - Piazzale Sant' Antonio, 5, 46047 Porto Mantovano (MN)  - Codice fiscale: 93007890200
+    Parrocchia di S.Antonio - Piazzale Sant'Antonio, 5, 46047 Porto Mantovano (MN)  - Codice fiscale: 93007890200
   </h4>
 </footer>
