@@ -37,7 +37,6 @@ import { LoginDialogComponent } from './components/login-dialog/login-dialog.com
 import { RegisterDialogComponent } from './components/register-dialog/register-dialog.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContattiComponent } from './components/contatti/contatti.component';
-import { FooterComponent } from './components/footer/footer.component';
 
 const MATERIAL_MODULES = [
   MatGridListModule,
@@ -67,8 +66,7 @@ const MATERIAL_MODULES = [
     LoginDialogComponent,
     RegisterDialogComponent,
     AboutComponent,
-    ContattiComponent,
-    FooterComponent
+    ContattiComponent
   ],
   imports: [
     BrowserModule,

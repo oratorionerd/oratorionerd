@@ -11,9 +11,11 @@ import { YoutubeVideo } from 'src/app/models/youtubeVideo';
 export class AboutComponent implements OnInit {
 
   public safeURL : SafeResourceUrl;
+  public videoWidth : number;
+  public videoHeight : number;
   public youtubeVideoObj : YoutubeVideo;
   public isLoaded : boolean;
-
+  
   constructor(private _sanitizer: DomSanitizer, private apiService : ApiService) {
     this.isLoaded = false;
     this.apiService.getLatestVideo().subscribe((resp : YoutubeVideo) => {
@@ -21,20 +23,26 @@ export class AboutComponent implements OnInit {
       this.isLoaded = true;
       this.safeURL = this._sanitizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/embed/${this.youtubeVideoObj.videoId}`);
     })
-    //this.youtubeVideoObj = {
-    //  title: "Messa del Patrono",
-    //  description : "Messa delle ore 18:30",
-    //  videoId : "rVwPMOMKwSQ"
-    //}
   }
 
   ngOnInit(): void {
     const tag = document.createElement('script');
-
     tag.src = "https://www.youtube.com/iframe_api";
     document.body.appendChild(tag);
 
-    
+    if(window.innerWidth > 992){
+      this.videoWidth = 640;
+      this.videoHeight = 480;
+    }
+    else if(window.innerWidth > 767) {
+      this.videoWidth = 480;
+      this.videoHeight = 360;
+    }
+    else {
+      this.videoWidth = 320;
+      this.videoHeight = 180;
+    }
+
   }
 
 }
