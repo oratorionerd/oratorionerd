@@ -6,5 +6,5 @@
         {{data.title}}
       </mat-panel-title>
     </mat-expansion-panel-header>
-    <a mat-button *ngFor="let file of data.files" class="file-link" href="file.path" target="_blank"><mat-icon>picture_as_pdf</mat-icon>&emsp;{{file.title}}</a><br/>
+    <a mat-button *ngFor="let file of data.files" class="file-link" href="{{file.path}}" target="_blank"><mat-icon>picture_as_pdf</mat-icon>&emsp;{{file.title}}</a><br/>
   </mat-expansion-panel>

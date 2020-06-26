@@ -21,10 +21,9 @@ export class Covid19Component implements OnInit {
   ngOnInit(): void {
     this.apiService.getCovidData().subscribe((resp : any) => {
       for(let data of resp){
-        console.log(data);
-        let tmp : CovidData = {
+          let tmp : CovidData = {
           title: data.titolo,
-          files: data.files.map(function(file){ return {title: file.name, path: `${basePath}${file.path}`}})
+          files: data.files.map(function(file){ return {title: file.name, path: `${basePath}${file.url}`}})
         }
         this.covidData.push(tmp);
       }
