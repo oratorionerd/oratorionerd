@@ -1,5 +1,5 @@
 <div *ngIf="isLoaded">
-    <h2 class="mat-h2 primary-title" style="width: fit-content; max-width: 90%; margin: 10px auto;">Guarda il nuovo video: {{youtubeVideoObj.title}}</h2>
+    <h2 class="mat-h2 primary-title center">Guarda il nuovo video: {{youtubeVideoObj.title}}</h2>
     <div class="container">
         <youtube-player class="video-container" [videoId]="youtubeVideoObj.videoId" [width]="videoWidth" [height]="videoHeight"></youtube-player>
         <div class="informations">

@@ -28,3 +28,7 @@
     color:#3f51b5;
   }
   
+  .center {
+    margin: 10px auto; 
+    width: fit-content;
+  }

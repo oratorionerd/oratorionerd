@@ -1,0 +1,24 @@
+.title{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 32px;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    color: #f44336;
+  }
+
+  .section-title {
+    color: #3f51b5;
+  }
+
+  .container {
+    margin: 20px auto;
+    max-width: 90%;
+  }
+
+  .file-link {
+    padding: 10px;
+    white-space: normal !important;
+    line-height: 1.8rem;
+    text-align: start;
+    width: 100%;
+  }

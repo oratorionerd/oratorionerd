@@ -7,6 +7,7 @@ import { YoutubeVideo } from 'src/app/models/youtubeVideo';
 const strapiEndpoint = "http://parrocchiasantonio.it:1337";
 const avvisiPath = "avvisis"
 const youtubeEndpoint = "http://parrocchiasantonio.it:3006/getLatestVideo";
+const covidEndpoint = "http://parrocchiasantonio.it:1337/modulis";
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -43,5 +44,9 @@ export class ApiService {
 
   public getLatestVideo() : Observable<YoutubeVideo> {
     return this.http.get<YoutubeVideo>(youtubeEndpoint);
+  }
+
+  public getCovidData() : Observable<any> {
+    return this.http.get<any>(covidEndpoint);
   }
 }

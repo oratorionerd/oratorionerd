@@ -30,6 +30,7 @@ import {MatChipsModule} from '@angular/material/chips';
 import  {MatDividerModule} from '@angular/material/divider';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatListModule} from '@angular/material/list';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 /* Components */
 import { AvvisiComponent } from './components/avvisi/avvisi.component';
@@ -37,6 +38,7 @@ import { LoginDialogComponent } from './components/login-dialog/login-dialog.com
 import { RegisterDialogComponent } from './components/register-dialog/register-dialog.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContattiComponent } from './components/contatti/contatti.component';
+import { Covid19Component } from './pages/covid19/covid19.component';
 
 const MATERIAL_MODULES = [
   MatGridListModule,
@@ -54,7 +56,8 @@ const MATERIAL_MODULES = [
   MatSnackBarModule,
   MatChipsModule,
   MatDividerModule,
-  MatListModule
+  MatListModule,
+  MatExpansionModule
 ]
 
 @NgModule({
@@ -66,7 +69,8 @@ const MATERIAL_MODULES = [
     LoginDialogComponent,
     RegisterDialogComponent,
     AboutComponent,
-    ContattiComponent
+    ContattiComponent,
+    Covid19Component
   ],
   imports: [
     BrowserModule,

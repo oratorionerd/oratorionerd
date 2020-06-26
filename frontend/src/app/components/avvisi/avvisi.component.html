@@ -17,5 +17,5 @@
       <a mat-button href="{{strapiEndpoint}}{{avviso.urlAllegato}}" style="overflow: hidden;" target="_blank">{{avviso.titoloAllegato}}</a>
     </mat-card-actions>
 </mat-card>
-
+<a *ngIf="isFullWidth==false" class="link-to-history" mat-stroked-button routerLink="/avvisi">Storico avvisi</a>
 </div>
