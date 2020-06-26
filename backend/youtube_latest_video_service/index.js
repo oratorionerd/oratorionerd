@@ -21,12 +21,10 @@ var lastFrontendObject = {
 
 //Scheduled task to retrieve periodically the latest video (youtube api key with daily usage limit)
 var scheduleRule = new schedule.RecurrenceRule();
-scheduleRule.hour = [8,10,12,14,15,16,18,20,22];
+scheduleRule.hour = [6,8,10,12,13,14,16,18,20] //Timezone fix: the real hours are [8,10,12,14,15,16,18,20,22];
 scheduleRule.minute = [0];
 
 var scheduled = schedule.scheduleJob(scheduleRule, function(){
-    console.log("Youtube API called at [" + new Date() + "]");
-
     axios.defaults.baseURL = YOUTUBE_URL;
     axios.get(PATH).then(resp => {
         let lastVideo = resp.data.items[0];
@@ -48,17 +46,20 @@ var scheduled = schedule.scheduleJob(scheduleRule, function(){
                 description : lastVideo.snippet.description
             }
         }
-        console.log("API request done without errors");
-
-    }).catch(error => console.log("Youtube API raises an error: " + error.message));
+    }).catch(error => {
+        console.log("--- Youtube API raises an error! ---");
+        console.log(`   > At time [${new Date()}]`);
+        console.log(`   > Error message: ${error.message}`);
+        console.log("");
+    });
     
-    console.log("");
+    
 });
 
 //create a server object:
 let server = http.createServer(function (req, res) {
     if(req.url ==='/getLatestVideo'){
-        res.writeHead(200,{'Content-Type': 'application/json', "Access-Control-Allow-Origin": "*"});
+        res.writeHead(200,{'Content-Type': 'application/json'});
         res.end(JSON.stringify(lastFrontendObject));
     }
 }).listen(PORT);
@@ -69,4 +70,4 @@ process.on('SIGINT', function() {
     scheduled.cancel();
 
     process.exit(0);
-  });
+});

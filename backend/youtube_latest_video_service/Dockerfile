@@ -9,7 +9,7 @@ WORKDIR /usr/src/app
 COPY ./package.json .
 COPY ./package-lock.json .
 # Bundle app source
-COPY ./youtube_latest_video_service/index.js .
+COPY ./index.js .
 
 # If you are building your code for production
 RUN npm ci --only=production
