@@ -4,10 +4,10 @@ import { Observable, of } from 'rxjs';
 import { Avvisi } from 'src/app/models/avvisi'
 import { YoutubeVideo } from 'src/app/models/youtubeVideo';
 
-const strapiEndpoint = "http://parrocchiasantonio.it:1337";
+const strapiEndpoint = "https://strapi.parrocchiasantonio.it";
 const avvisiPath = "avvisis"
-const youtubeEndpoint = "http://parrocchiasantonio.it:3006/getLatestVideo";
-const covidEndpoint = "http://parrocchiasantonio.it:1337/modulis";
+const youtubeEndpoint = "https://youtube.parrocchiasantonio.it/getLatestVideo";
+const covidEndpoint = "modulis";
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -47,6 +47,6 @@ export class ApiService {
   }
 
   public getCovidData() : Observable<any> {
-    return this.http.get<any>(covidEndpoint);
+    return this.http.get<any>(`${strapiEndpoint}/${covidEndpoint}`);
   }
 }

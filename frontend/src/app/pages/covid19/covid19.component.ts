@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CovidData } from 'src/app/models/covid_data';
 import { ApiService } from 'src/app/services/api/api.service';
 
-const basePath : string = "http://parrocchiasantonio.it:1337";
+const basePath : string = "https://strapi.parrocchiasantonio.it";
 
 @Component({
   selector: 'app-covid19',
